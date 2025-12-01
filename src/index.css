@@ -1,0 +1,31 @@
+/* Reset sencillo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y colores base */
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;            /* texto oscuro y legible */
+  background-color: #e2e8f0; /* gris clarito para el fondo */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* El body ocupa toda la pantalla, sin centrado raro */
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* El root también ocupa toda la pantalla */
+#root {
+  min-height: 100vh;
+}
