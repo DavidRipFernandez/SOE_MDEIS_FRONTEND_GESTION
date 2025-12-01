@@ -1,5 +1,3 @@
-// src/types/models.ts
-
 // ===== CLIENTE =====
 export interface Cliente {
   clienteId: number;
@@ -10,7 +8,7 @@ export interface Cliente {
   email?: string | null;
   telefono?: string | null;
   direccion?: string | null;
-  fechaRegistro: string; // viene del backend
+  fechaRegistro: string;
   activo: boolean;
 }
 
@@ -19,9 +17,9 @@ export interface ClienteCreate {
   numeroDocumento: string;
   nombres: string;
   apellidos: string;
-  email?: string;      // <- ya no null
-  telefono?: string;   // <- ya no null
-  direccion?: string;  // <- ya no null
+  email?: string;
+  telefono?: string;
+  direccion?: string;
   activo?: boolean;
 }
 
@@ -58,7 +56,7 @@ export interface Empleado {
   cargo: string;
   email?: string | null;
   telefono?: string | null;
-  fechaContratacion: string; // Date en backend, string en frontend
+  fechaContratacion: string; // date en backend, string en frontend
   salarioMensual: number;
   activo: boolean;
 }
@@ -69,8 +67,8 @@ export interface EmpleadoCreate {
   nombres: string;
   apellidos: string;
   cargo: string;
-  email?: string | null;
-  telefono?: string | null;
+  email?: string;
+  telefono?: string;
   fechaContratacion: string;
   salarioMensual: number;
   activo?: boolean;

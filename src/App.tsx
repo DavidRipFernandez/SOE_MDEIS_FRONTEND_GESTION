@@ -1,15 +1,10 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import ClientesPage from "./pages/ClientesPage";   // 👈 AQUÍ
+import ClientesPage from "./pages/ClientesPage";   
+import ProductosPage from "./pages/ProductosPage";
+import EmpleadosPage from "./pages/EmpleadosPage";
 
-function PlaceholderPage({ titulo }: { titulo: string }) {
-  return (
-    <div style={{ padding: "24px" }}>
-      <h1>{titulo}</h1>
-      <p>Próximamente aquí estará el CRUD completo.</p>
-    </div>
-  );
-}
+
 
 function App() {
   return (
@@ -75,20 +70,15 @@ function App() {
         </nav>
       </header>
 
-      <main style={{ padding: "24px" }}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/clientes" element={<ClientesPage />} />  {/* 👈 AQUÍ usamos la página */}
-          <Route
-            path="/productos"
-            element={<PlaceholderPage titulo="Gestión de Productos" />}
-          />
-          <Route
-            path="/empleados"
-            element={<PlaceholderPage titulo="Gestión de Empleados" />}
-          />
-        </Routes>
-      </main>
+<main style={{ padding: "24px" }}>
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/clientes" element={<ClientesPage />} />
+    <Route path="/productos" element={<ProductosPage />} />
+    <Route path="/empleados" element={<EmpleadosPage />} />
+  </Routes>
+</main>
+
     </div>
   );
 }
